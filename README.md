@@ -37,7 +37,7 @@ Durante o desenvolvimento deste projeto, estou praticando:
 
 ## 🔗 Acesso ao projeto
 
-*(Adicione aqui o link do GitHub Pages ou hospedagem quando publicar)*
+https://lucianodevz.github.io/Portifolio/
 
 ## 🤝 Contato
 
