@@ -1,0 +1,32 @@
+/* ============================================================
+   LAYOUT — Estrutura principal da página e card base
+   ============================================================ */
+
+/* Wrapper central que envolve todo o conteúdo */
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ----------------------------------------------------------
+   Card base — reutilizado por várias seções
+---------------------------------------------------------- */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-mid), box-shadow var(--transition-mid);
+}
+
+.card:hover {
+  border-color: var(--color-border-light);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}

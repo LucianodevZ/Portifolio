@@ -1,0 +1,56 @@
+/* ============================================================
+   RESPONSIVE — Media queries (mobile first)
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Tablet — até 768px
+---------------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* Layout geral */
+  .page-wrapper {
+    padding: var(--space-lg) var(--space-md);
+    gap: var(--space-lg);
+  }
+
+  /* Header: empilha verticalmente */
+  .sobre-mim {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+  }
+
+  .sobre-mim__foto {
+    grid-row: auto;
+  }
+
+  .sobre-mim__detalhe {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+  }
+
+  /* Formação: uma coluna */
+  .formacao {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projetos: uma coluna */
+  .projetos__lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------------------------------------------------
+   Mobile — até 480px
+---------------------------------------------------------- */
+@media (max-width: 480px) {
+
+  .sobre-mim__identidade h1 {
+    font-size: 1.5rem;
+  }
+
+  .skill-tag {
+    font-size: 0.78rem;
+    padding: 0.38rem 0.8rem;
+  }
+}

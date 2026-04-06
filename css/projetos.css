@@ -1,0 +1,131 @@
+/* ============================================================
+   PROJETOS — Projetos pessoais
+   ============================================================ */
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ----------------------------------------------------------
+   Cabeçalho da seção com linha decorativa
+---------------------------------------------------------- */
+.projetos__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.projetos__header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.projetos__header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-purple-line), transparent);
+}
+
+/* ----------------------------------------------------------
+   Grid de cards de projeto
+---------------------------------------------------------- */
+.projetos__lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+/* ----------------------------------------------------------
+   Card individual de projeto
+---------------------------------------------------------- */
+.projeto-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--transition-mid),
+    transform    var(--transition-mid),
+    box-shadow   var(--transition-mid);
+}
+
+/* Linha de destaque no topo do card (visível no hover) */
+.projeto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-purple), var(--color-accent));
+  opacity: 0;
+  transition: opacity var(--transition-mid);
+}
+
+.projeto-card:hover {
+  border-color: var(--color-purple-line);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card), 0 16px 48px rgba(124, 58, 237, 0.2);
+}
+
+.projeto-card:hover::before {
+  opacity: 1;
+}
+
+.projeto-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.projeto-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* Botão/link "Ver projeto" */
+.projeto-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+  border: 1px solid var(--color-purple-line);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  transition:
+    background    var(--transition-fast),
+    color          var(--transition-fast),
+    border-color   var(--transition-fast);
+}
+
+.projeto-card a::after {
+  content: '→';
+}
+
+.projeto-card a:hover {
+  background: var(--color-purple);
+  border-color: var(--color-purple);
+  color: #fff;
+}

@@ -1,0 +1,69 @@
+/* ============================================================
+   FORMAÇÃO — Formação acadêmica, idiomas e cursos
+   ============================================================ */
+
+.formacao {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.formacao > div {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-mid);
+}
+
+.formacao > div:hover {
+  border-color: var(--color-purple-line);
+}
+
+.formacao h3 {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+  margin-bottom: var(--space-sm);
+}
+
+/* ----------------------------------------------------------
+   Formação acadêmica
+---------------------------------------------------------- */
+.formacao-academica p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------------
+   Idiomas e Cursos — lista com marcador
+---------------------------------------------------------- */
+.idiomas ul,
+.cursos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.idiomas li,
+.cursos li {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.idiomas li::before,
+.cursos li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: var(--color-purple);
+  font-size: 0.7rem;
+}

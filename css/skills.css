@@ -1,0 +1,79 @@
+/* ============================================================
+   SKILLS — Habilidades técnicas
+   ============================================================ */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ----------------------------------------------------------
+   Cabeçalho com linha decorativa
+---------------------------------------------------------- */
+.skills__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.skills__header h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.skills__header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-purple-line), transparent);
+}
+
+/* ----------------------------------------------------------
+   Grade de tags
+---------------------------------------------------------- */
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ----------------------------------------------------------
+   Tag individual de habilidade
+---------------------------------------------------------- */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-tag-bg);
+  border: 1px solid var(--color-purple-line);
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  cursor: default;
+  transition:
+    background    var(--transition-fast),
+    color         var(--transition-fast),
+    border-color  var(--transition-fast),
+    transform     var(--transition-fast);
+}
+
+.skill-tag::before {
+  content: '◆';
+  font-size: 0.4rem;
+  opacity: 0.7;
+}
+
+.skill-tag:hover {
+  background: var(--color-purple);
+  border-color: var(--color-purple);
+  color: #fff;
+  transform: translateY(-2px);
+}
